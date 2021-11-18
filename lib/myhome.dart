@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:widgets_app/recipe_detail.dart';
 
 class MyHome extends StatelessWidget {
@@ -17,17 +18,19 @@ class MyHome extends StatelessWidget {
   static const color_card = 0xFFe5ddc4;
   static const color_shadow = 0xFF786d50;
 
+  const MyHome({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
 //APPBAR
         appBar: AppBar(
-          title: Text('Recipe App'),
+          title: const Text('Recipe App'),
           elevation: 10.0,
           backgroundColor: Colors.black54,
           //APPBAR ICONS
-          leading: Icon(Icons.menu),
+          leading: const Icon(Icons.menu),
           actions: <Widget>[
             IconButton(
               icon: const Icon(
@@ -47,14 +50,14 @@ class MyHome extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-            CircleAvatar(
+            const CircleAvatar(
               //radius: 30.0,
               backgroundImage: AssetImage('assets/avatar_1.png'),
             ),
           ],
         ),
         //backgroundColor:  Colors.white,
-        backgroundColor: Color(color_background),
+        backgroundColor: const Color(color_background),
         //backgroundColor: Color(0xFFc2a564),
         //backgroundColor: Color(0xFFe4d5b3),
         //backgroundColor: Color(0xFFc19329),
@@ -69,42 +72,54 @@ class MyHome extends StatelessWidget {
             children: <Widget>[
               //UPPER PART
               Container(
-                padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
                 //TITLE
                 child: Text(
                   'Traditional Food!',
-                  style: TextStyle(
-                    fontSize: 55.0,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black87,
-                    backgroundColor: Color(color_card),
-                    decoration: TextDecoration.combine(
-                      [
-                        TextDecoration.overline,
-                        TextDecoration.underline,
-                      ],
+                  style: GoogleFonts.dancingScript(
+                    //reenieBeanie
+                    //pinyonScript
+                    //italianno
+                    //alexbrush
+                    //tangerine
+                    //parisienne
+                    //dancing
+
+                    textStyle: TextStyle(
+
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black87,
+                      backgroundColor: const Color(color_card),
+                      decoration: TextDecoration.combine(
+                        [
+                          TextDecoration.overline,
+                          TextDecoration.underline,
+                        ],
+                      ),
+                      //decorationColor: Color(0xFF816e40),
+                      decorationColor: Colors.deepOrangeAccent,
+                      decorationThickness: 2.0,
+                      decorationStyle: TextDecorationStyle.wavy,
+                      letterSpacing: 1.0,
+                      wordSpacing: 5.0,
+                      //shadows: [
+                      //  Shadow(
+                      //    color: Colors.black54,
+                      //    blurRadius: 20.0,
+                      //    offset: Offset(5.0, 10.0),
+                      //  ),
+                      //],
+                      //fontFamily: 'PuppiesPlay',
+                      
                     ),
-                    //decorationColor: Color(0xFF816e40),
-                    decorationColor: Colors.deepOrangeAccent,
-                    decorationThickness: 2.0,
-                    decorationStyle: TextDecorationStyle.wavy,
-                    letterSpacing: 1.0,
-                    wordSpacing: 5.0,
-                    //shadows: [
-                    //  Shadow(
-                    //    color: Colors.black54,
-                    //    blurRadius: 20.0,
-                    //    offset: Offset(5.0, 10.0),
-                    //  ),
-                    //],
-                    fontFamily: 'PuppiesPlay',
                   ),
                 ),
               ),
 
               //SEARCH BAR
               Padding(
-                padding: EdgeInsets.fromLTRB(15, 30, 15, 0),
+                padding: const EdgeInsets.fromLTRB(15, 30, 15, 0),
                 child: TextField(
                   decoration: InputDecoration(
                     fillColor: Colors.white60,
@@ -138,18 +153,20 @@ class MyHome extends StatelessWidget {
 
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DetailRecipe()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DetailRecipe()));
                 },
                 child: Stack(
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 5.0),
+                      margin: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 5.0),
                       height: 150.0,
                       decoration: BoxDecoration(
-                        color: Color(color_card),
+                        color: const Color(color_card),
                         borderRadius: BorderRadius.circular(12.0),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Color(color_shadow),
                             blurRadius: 10.0,
@@ -169,7 +186,7 @@ class MyHome extends StatelessWidget {
                               children: [
                                 Container(
                                   width: 120.0,
-                                  child: Text(
+                                  child: const Text(
                                     'Tortilla de patatas',
                                     style: TextStyle(
                                       fontSize: 15.0,
@@ -177,15 +194,15 @@ class MyHome extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.favorite_border,
                                   color: Colors.pinkAccent,
                                 )
                               ],
                             ),
-                            Text('★★★★'),
+                            const Text('★★★★'),
                             Row(
-                              children: [
+                              children: const [
                                 Text(
                                   '2 hours',
                                   style: TextStyle(
@@ -222,12 +239,12 @@ class MyHome extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 5.0),
+                    margin: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 5.0),
                     height: 150.0,
                     decoration: BoxDecoration(
-                      color: Color(color_card),
+                      color: const Color(color_card),
                       borderRadius: BorderRadius.circular(12.0),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(color_shadow),
                           blurRadius: 10.0,
@@ -247,7 +264,7 @@ class MyHome extends StatelessWidget {
                             children: [
                               Container(
                                 width: 120.0,
-                                child: Text(
+                                child: const Text(
                                   'Gazpacho',
                                   style: TextStyle(
                                     fontSize: 15.0,
@@ -255,15 +272,15 @@ class MyHome extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite_border,
                                 color: Colors.pinkAccent,
                               )
                             ],
                           ),
-                          Text('★★★★'),
+                          const Text('★★★★'),
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 '45 min',
                                 style: TextStyle(
