@@ -1,4 +1,4 @@
-# widgets_app
+# Recipe_app
 
 A new Flutter project.
 

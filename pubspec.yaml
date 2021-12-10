@@ -81,7 +81,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - assets/avatar_1.png
+    - assets/img/avatar_1.png
+    - assets/data/recipes.json
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
